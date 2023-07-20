@@ -39,7 +39,7 @@ test("Get value at N node of linked list", () => {
   expect(linkedList.at(3)).toBe(3);
 });
 
-test("Get value at N node of linked list", () => {
+test("Remove last element of linked list", () => {
   let linkedList = linkedListFactory();
   linkedList.append(1);
   linkedList.append(2);
@@ -47,4 +47,14 @@ test("Get value at N node of linked list", () => {
   linkedList.pop();
 
   expect(linkedList.getTail().value).toBe(2);
+});
+
+test("Check if linked list contains element", () => {
+  let linkedList = linkedListFactory();
+  linkedList.append(1);
+  linkedList.append(2);
+  linkedList.append(3);
+
+  expect(linkedList.contains(2)).toBe(true);
+  expect(linkedList.contains(100)).toBe(false);
 });

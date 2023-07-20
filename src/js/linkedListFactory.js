@@ -44,11 +44,21 @@ const linkedListFactory = (headValue = null) => {
       previousNode = current;
       current = current.nextNode;
     }
-
     tailNode = nodeFactory();
     tailNode = previousNode;
     size--;
-  }
+  };
+
+  const contains = (value) => {
+    let current = headNode;
+    while (current) {
+      if (current.value === value) {
+        return true;
+      }
+      current = current.nextNode;
+    }
+    return false;
+  };
 
   const printAll = () => {
     let current = headNode;
@@ -58,7 +68,17 @@ const linkedListFactory = (headValue = null) => {
     }
   };
 
-  return { append, prepend, getSize, getHead, getTail, at, pop, printAll };
+  return {
+    append,
+    prepend,
+    getSize,
+    getHead,
+    getTail,
+    at,
+    pop,
+    contains,
+    printAll,
+  };
 };
 
 export default linkedListFactory;
