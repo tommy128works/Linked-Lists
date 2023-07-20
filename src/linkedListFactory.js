@@ -10,15 +10,21 @@ const linkedListFactory = (headValue) => {
     tailNode = newNode;
   };
 
+  const prepend = (value) => {
+    let newNode = nodeFactory(value);
+    newNode.nextNode = headNode;
+    headNode = newNode;
+  };
+
   const printAll = () => {
     let current = headNode;
     while (current) {
       console.log(current.value);
       current = current.nextNode;
     }
-  }
+  };
 
-  return { headNode, tailNode, append, printAll };
+  return { headNode, tailNode, append, prepend, printAll };
 };
 
 export default linkedListFactory;
