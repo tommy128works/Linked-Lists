@@ -1,9 +1,12 @@
 import linkedListFactory from "./linkedListFactory.js";
 
-let linkedList = linkedListFactory(1);
+let linkedList = linkedListFactory();
+linkedList.append(1);
 linkedList.append(2);
-linkedList.append(3);
+linkedList.append(3); // add 1, 2, 3 to the end of the list
 
-linkedList.prepend(0);
+linkedList.prepend(0); // add 0 to the beginning of the list
+
+console.log("List size = " + linkedList.getSize()); // get size of list 
 
 linkedList.printAll();
