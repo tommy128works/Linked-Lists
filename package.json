@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "w": "npx prettier --write src"
   },
   "author": "",
   "license": "ISC",
