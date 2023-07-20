@@ -1,4 +1,4 @@
-import nodeFactory from "./nodeFactory.js";
+import nodeFactory from "./nodeFactory";
 
 const linkedListFactory = (headValue = null) => {
   let headNode = nodeFactory(headValue);
@@ -33,7 +33,9 @@ const linkedListFactory = (headValue = null) => {
 
   const getSize = () => size;
 
-  return { headNode, tailNode, size, getSize, append, prepend, printAll };
+  const getHead = () => headNode;
+
+  return { append, prepend, getSize, getHead, printAll };
 };
 
 export default linkedListFactory;
