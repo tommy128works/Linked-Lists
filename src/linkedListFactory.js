@@ -1,4 +1,4 @@
-import nodeFactory from "./nodeFactory";
+import nodeFactory from "./nodeFactory.js";
 
 const linkedListFactory = (headValue) => {
   let headNode = nodeFactory(headValue);
