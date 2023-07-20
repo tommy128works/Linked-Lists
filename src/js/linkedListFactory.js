@@ -73,13 +73,15 @@ const linkedListFactory = (headValue = null) => {
     return null;
   }
 
-  const printAll = () => {
+  const toString = () => {
     let current = headNode;
     while (current) {
-      console.log(current.value);
+      console.log("( " + current.value + " ) =>");
       current = current.nextNode;
     }
-  };
+
+    console.log(" null");
+  }
 
   return {
     append,
@@ -91,7 +93,7 @@ const linkedListFactory = (headValue = null) => {
     pop,
     contains,
     find,
-    printAll,
+    toString,
   };
 };
 
