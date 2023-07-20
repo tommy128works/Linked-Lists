@@ -58,3 +58,13 @@ test("Check if linked list contains element", () => {
   expect(linkedList.contains(2)).toBe(true);
   expect(linkedList.contains(100)).toBe(false);
 });
+
+test("Find index of value inside list", () => {
+  let linkedList = linkedListFactory();
+  linkedList.append(1);
+  linkedList.append(2);
+  linkedList.append(3);
+
+  expect(linkedList.find(2)).toBe(2);
+  expect(linkedList.find(100)).toBe(null);
+});

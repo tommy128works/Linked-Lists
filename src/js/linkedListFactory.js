@@ -60,6 +60,19 @@ const linkedListFactory = (headValue = null) => {
     return false;
   };
 
+  const find = (value) => {
+    let current = headNode;
+    let index = 1;
+    while (current) {
+      if (current.value === value) {
+        return index;
+      }
+      current = current.nextNode;
+      index++;
+    }
+    return null;
+  }
+
   const printAll = () => {
     let current = headNode;
     while (current) {
@@ -77,6 +90,7 @@ const linkedListFactory = (headValue = null) => {
     at,
     pop,
     contains,
+    find,
     printAll,
   };
 };
