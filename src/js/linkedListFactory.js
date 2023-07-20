@@ -37,6 +37,19 @@ const linkedListFactory = (headValue = null) => {
     return current.value;
   };
 
+  const pop = () => {
+    let previousNode = headNode;
+    let current = headNode;
+    while (current.nextNode) {
+      previousNode = current;
+      current = current.nextNode;
+    }
+
+    tailNode = nodeFactory();
+    tailNode = previousNode;
+    size--;
+  }
+
   const printAll = () => {
     let current = headNode;
     while (current) {
@@ -45,7 +58,7 @@ const linkedListFactory = (headValue = null) => {
     }
   };
 
-  return { append, prepend, getSize, getHead, getTail, at, printAll };
+  return { append, prepend, getSize, getHead, getTail, at, pop, printAll };
 };
 
 export default linkedListFactory;
